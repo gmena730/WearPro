@@ -1,0 +1,126 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #1f2937;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.product {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.product-title {
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    color: #1f2937;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.size-table {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+td:first-child {
+    text-align: left;
+    background-color: #f8fafc;
+    font-weight: 500;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+}
+
+.pricing-table h3,
+.tolerance-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.tolerance-info {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.tolerance-info ul {
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+}
+
+.tolerance-info li {
+    margin-bottom: 0.5rem;
+}
+
+.tolerance-info li:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .product {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
