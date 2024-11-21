@@ -35,8 +35,29 @@ header p {
     margin-bottom: 2rem;
 }
 
+.product-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #f8fafc;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .product-title {
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     font-size: 1.5rem;
     color: #1f2937;
     border-bottom: 2px solid #2563eb;
@@ -44,16 +65,50 @@ header p {
     display: inline-block;
 }
 
-.size-table {
+.specifications {
+    margin-bottom: 1rem;
+}
+
+.specifications h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: #4b5563;
+}
+
+.specifications ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.specifications li {
+    margin-bottom: 0.25rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.size-table, .pricing-table {
     margin-bottom: 2rem;
     overflow-x: auto;
+}
+
+.size-table h3, 
+.pricing-table h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #1f2937;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 2rem;
     font-size: 0.9rem;
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+table:last-child {
+    margin-bottom: 0;
 }
 
 th, td {
@@ -66,23 +121,25 @@ td:first-child {
     text-align: left;
     background-color: #f8fafc;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 th {
     background-color: #f8fafc;
     font-weight: 600;
-}
-
-.pricing-table h3,
-.tolerance-info h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 .tolerance-info {
     background-color: #f8fafc;
     padding: 1rem;
     border-radius: 4px;
+}
+
+.tolerance-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #1f2937;
 }
 
 .tolerance-info ul {
@@ -92,6 +149,7 @@ th {
 
 .tolerance-info li {
     margin-bottom: 0.5rem;
+    color: #4b5563;
 }
 
 .tolerance-info li:last-child {
@@ -107,6 +165,7 @@ footer {
     text-align: center;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -115,6 +174,15 @@ footer {
     .product {
         padding: 1rem;
     }
+
+    .product-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 200px;
+    }
     
     table {
         font-size: 0.8rem;
@@ -122,5 +190,39 @@ footer {
     
     th, td {
         padding: 0.5rem;
+    }
+
+    .size-table, 
+    .pricing-table {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 0 1rem;
+    }
+    
+    .specifications li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .product {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+        margin-bottom: 2rem;
+    }
+
+    .product-image {
+        height: 200px;
     }
 }
